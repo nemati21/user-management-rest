@@ -130,9 +130,9 @@ module.exports = (fastify, options, next) => {
 
   fastify.get('/users', {
     preValidation: [fastify.authenticate],
-    description: 'Inquiry Users',
-    tags: [swaggerTag],
     schema: {
+      description: 'Inquiry Users',
+      tags: [swaggerTag],
       response: {
         ...schemaTypes.swaggerErrorTypes,
         200: {
