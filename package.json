@@ -1,0 +1,29 @@
+{
+  "name": "user-management-service",
+  "version": "1.0.0",
+  "description": "User Management Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET NODE_ENV=development & env-cmd --file ./src/.env nodemon ./src/index.js"
+  },
+  "author": "Behnaz Nemati",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "dotenv": "^10.0.0",
+    "fastify": "3.22.0",
+    "fastify-jwt": "^2.5.0",
+    "fastify-swagger": "^4.12.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.1.3",
+    "sha256": "^0.2.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-security": "^1.4.0"
+  }
+}
