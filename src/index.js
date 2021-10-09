@@ -6,7 +6,7 @@ const cluster = require('cluster');
 const app = require('./server');
 const config = require('./config');
 const { setConsoleMessage } = require('./lib');
-const { client, seed } = require('./database');
+const { client } = require('./database');
 
 if (cluster.isMaster) {
   console.log(setConsoleMessage(`MODE is ${config.env}`, 'INFO'));
@@ -27,7 +27,6 @@ if (cluster.isMaster) {
     client.connect()
       .then(() => {
         console.log(setConsoleMessage('Connection to service', 'OK'));
-        seed();
       })
       .catch((err) => {
         console.log(setConsoleMessage(`Connection to service. ERROR: ${err}`, 'ERROR'));

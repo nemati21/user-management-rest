@@ -4,6 +4,7 @@
   "description": "User Management Service",
   "main": "index.js",
   "scripts": {
+    "prestart": "SET NODE_ENV=development & env-cmd --file ./src/.env node ./src/seeder.js",
     "start": "SET NODE_ENV=development & env-cmd --file ./src/.env nodemon ./src/index.js"
   },
   "author": "Behnaz Nemati",
