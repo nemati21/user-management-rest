@@ -35,13 +35,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: SSH and deploy node app
-      uses: appleboy/ssh-action@dev
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        port: ${{ secrets.SSH_PORT }}
+    - name: deploy node app
         script: |
           cd ~/user-management-rest
           git pull origin dev
